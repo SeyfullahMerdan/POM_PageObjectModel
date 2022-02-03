@@ -27,7 +27,8 @@ public class C02_PropertiesIlkClass {
         hotelMyCampPage.loginButonu.click();
 
         // Burada önemli olan daha kısa veya daha uzun olması degil, önemli olan daha dinamik olmasıdır
-
+// yarın adresimiz veya kodumuz degiştiginde tek tek binlerce sayfaya bakmak yerine tek classdan kontrolünü saglamak
+        // bu sayede bir yerde degiştirip diğer bütün classlarıda etkilemiş olacagız
 
 
     }
