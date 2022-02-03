@@ -20,7 +20,7 @@ public class Driver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         return driver;
     }
-
+// Bu methodu her çagırdıgımda yeni bir driver çagırıyor. Tekrardan oluşturuyor.
 
 
     public static void closeDriver() {

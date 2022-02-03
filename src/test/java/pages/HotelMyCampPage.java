@@ -26,9 +26,10 @@ public class HotelMyCampPage {
      public WebElement loginButonu;
 
      @FindBy(xpath="//span[@class='username username-hide-on-mobile']")
-    public WebElement managerButonu;
+     public WebElement managerButonu;
 
-
+     @FindBy(xpath = "//div[@class='validation-summary-errors']")
+     public WebElement girisYapilamadiYaziElementi;
 
 
 }
