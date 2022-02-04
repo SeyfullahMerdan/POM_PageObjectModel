@@ -12,9 +12,8 @@ import java.time.Duration;
 
 public class Driver {
 
-
-    private Driver () {
-
+    private Driver () {    // Bu üyelere başka classlardan ulaşabilmm için
+                 // getter setter yapmam gerekiyor. Getter Setter yapmadıgım sürece burdaki private ögelere ulaşamam.
     }
 
     private static WebDriver driver;

@@ -27,8 +27,10 @@ import utilities.Driver;
             hotelMyCampPage.passwordBox.sendKeys("manager1!");
             hotelMyCampPage.loginButonu.click();
             //	Degerleri girildiginde sayfaya girilemedigini test et
-
             Assert.assertTrue(hotelMyCampPage.girisYapilamadiYaziElementi.isDisplayed());
             Driver.closeDriver();
+
+            hotelMyCampPage.bekle(3);
+
         }
     }
