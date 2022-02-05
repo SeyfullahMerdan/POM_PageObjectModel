@@ -61,6 +61,12 @@ public class HotelMyCampPage {
      @FindBy (xpath = "//button[@id='btnSubmit']")
      public WebElement addHotelSaveButonu;
 
+     @FindBy (xpath = "//div[.='Hotel was inserted successfully']")
+     public WebElement basariliGirisOnayTexti;
+
+     @FindBy (xpath = "//button[@data-bb-handler='ok']")
+     public WebElement basariliGirisOnayTextiOKButonu;
+
 
 
 
@@ -80,8 +86,6 @@ public class HotelMyCampPage {
           passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
           loginButonu.click();
      }
-
-
 
 
 

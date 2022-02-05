@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
@@ -53,26 +54,8 @@ public class C01_E2ETesting{
         select.selectByVisibleText("Hotel Type2");
 
         hotelMyCampPage.addHotelSaveButonu.click();
-
-
+        Assert.assertTrue(hotelMyCampPage.basariliGirisOnayTexti.isDisplayed());
+        hotelMyCampPage.basariliGirisOnayTextiOKButonu.click();
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

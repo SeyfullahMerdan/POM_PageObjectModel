@@ -16,18 +16,17 @@ public class PositiveLoginTest {
     //test data username: manager ,
     //test data password : Manager1!
     //Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-
-
     @Test
     public void positiveLoginTest() {
 
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
-        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();  // Önce obje oluşturuyoruz,Page sayfasına obje ile ulaşıyorduk.
         hotelMyCampPage.ilkLoginLinki.click();
         hotelMyCampPage.usernameBox.sendKeys(ConfigReader.getProperty("HMCValidUsername"));
         hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
         hotelMyCampPage.loginButonu.click();
 
         Assert.assertTrue(hotelMyCampPage.basariliGirisYaziElementi.isDisplayed());
+
     }
 }

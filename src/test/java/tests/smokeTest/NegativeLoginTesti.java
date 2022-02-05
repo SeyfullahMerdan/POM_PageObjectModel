@@ -6,6 +6,9 @@ import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+    // Bir Tester'in görevi sistemin çalışır oldugundan emin olmaktır. Smoke testler bu açıdan önemlidir.
+   //  Kullandıgımız uygulamanın temel fonksiyonlarını test etmek için yapılır. Her gün yapılan testlerdir.
+
 public class NegativeLoginTesti {
 
     // 1) smokeTest  paketi altinda yeni bir Class olustur: NegativeTest
@@ -22,7 +25,6 @@ public class NegativeLoginTesti {
 
     @Test
     public void yanlisSifreTesti(){
-
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
@@ -34,11 +36,8 @@ public class NegativeLoginTesti {
 
     }
 
-
     @Test
     public void yanlisUsernameTesti(){
-
-
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
@@ -47,15 +46,11 @@ public class NegativeLoginTesti {
         hotelMyCampPage.loginButonu.click();
         Assert.assertTrue(hotelMyCampPage.girisYapilamadiYaziElementi.isDisplayed());
         Driver.closeDriver();
-
     }
-
 
 
     @Test
     public void yanlisSifreUsernameTesti(){
-
-
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();

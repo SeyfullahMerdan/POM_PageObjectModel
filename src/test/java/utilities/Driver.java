@@ -24,8 +24,8 @@ public class Driver {
                              // diger kullanımlarda devreye girmeyecek.
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome" :
-                    driver=new ChromeDriver();
                     WebDriverManager.chromedriver().setup();
+                    driver=new ChromeDriver();
                     break;
                 case "firefox" :
                     WebDriverManager.firefoxdriver().setup();
@@ -43,9 +43,6 @@ public class Driver {
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver=new ChromeDriver();
             }
 
         }
