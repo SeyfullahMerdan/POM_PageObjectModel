@@ -27,43 +27,33 @@ public class HMCWebTablePage {
 
 
     public WebElement satirGetir(int satirNo){
-
-        String satirDinamikXpathi="//tbody//tr["+satirNo+"]";
-
-        WebElement satirElementi=Driver.getDriver().findElement(By.xpath(satirDinamikXpathi));
-
+        String satirDinamikXpath="//tbody//tr["+satirNo+"]";
+        WebElement satirElementi=Driver.getDriver().findElement(By.xpath(satirDinamikXpath));
         return satirElementi;
-
     }
 
 
     public String hucreWebElementGetir(int satir, int sutun) {
-
-        String dinamikHucreXpathi="//tbody//tr["+satir+"]//td["+sutun+"]";
-        WebElement istenenHucreElementi=Driver.getDriver().findElement(By.xpath(dinamikHucreXpathi));
+        String dinamikHucreXpath="//tbody//tr["+satir+"]//td["+sutun+"]";
+        WebElement istenenHucreElementi=Driver.getDriver().findElement(By.xpath(dinamikHucreXpath));
         String hucreDatasi=istenenHucreElementi.getText();
-
         return hucreDatasi;
     }
 
 
     public void sutunYazdir(int sutun) {
-
         // Her bir satırdaki istenen sütun elementini yazdırbilmek için önce satır sayısını bilmeye ihtiyacım var.
         // Satır sayısını locateden bulabilirm daha önce locate etmiştim.
-
         int satirSayisi=satirlarListesi.size();
-
+        // Satırların listesini önceden locate etmiştim.
+        // size() alarak table'da kaç tane satır olduğunu öğrendim.
+        // Şimdi For loop ile her satıra gidip her satırın hangi sutununu istedigimi söyleyecegim. Her satırın aynı sutunu
+        // bana komple o sutunu verecek
         for (int i=1 ; i<=satirSayisi ; i++) {
-            System.out.println( hucreWebElementGetir(i,sutun) ) ;
-        }
-
-
-
-
-
-
+            System.out.println(hucreWebElementGetir(i,sutun));}
     }
+
+
 
 
 

@@ -31,10 +31,8 @@ public class DemoqaPage {
 
 
     public void sutunYazdir(int sutun) {
-
-
         int satirSayisi = tumSatirlarWebElementList.size();
-        String dinamikXpath;
+        String dinamikXpath;  // ((//div[@class='rt-tr-group'])[3]//div[@class='rt-td'])[4]
         WebElement geciciElement;
         System.out.println(basliklarWebelementiListesi.get(sutun - 1).getText());
 
@@ -47,37 +45,29 @@ public class DemoqaPage {
 
 
     public void ismeGoreMaasYazdir(String isim) {
-
         int satirSayisi = tumSatirlarWebElementList.size();
         String dinamikXpath;
         String satirdakiIsim;
         String salary;
-
-        for (int i = 0; i <= satirSayisi; i++) {
-
+        for (int i = 1; i <= satirSayisi; i++) {
             dinamikXpath="((//div[@class='rt-tr-group'])["+i+"]//div[@class='rt-td'])["+1+"]";
             satirdakiIsim=Driver.getDriver().findElement(By.xpath(dinamikXpath)).getText();
             dinamikXpath="((//div[@class='rt-tr-group'])["+i+"]//div[@class='rt-td'])["+5+"]";
             salary=Driver.getDriver().findElement(By.xpath(dinamikXpath)).getText();
-
-            if (satirdakiIsim.equals(isim)) {
-                System.out.println(salary);
+            if (satirdakiIsim.equals(isim)) {         //  if (satirin1.elementi kierra ise) {
+                System.out.println(salary);           //           satirin 5.elementini yazdır }
             }
-          //  if (satirin1.elementi kierra ise) {
-           //     satirin 5.elementini yazdır }
         }
-
-
-
-
     }
+
 
 
     public void hucreYazdir(int satir, int sutun) {
 
-
         String dinamikXpath= "((//div[@class='rt-tr-group'])[" + satir + "]//div[@class='rt-td'])[" + sutun + "]";
         System.out.println(Driver.getDriver().findElement(By.xpath(dinamikXpath)).getText());
-
     }
+
+
+
 }

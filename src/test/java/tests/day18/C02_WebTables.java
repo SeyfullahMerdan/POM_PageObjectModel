@@ -49,19 +49,19 @@ public class C02_WebTables {
         System.out.println(hmcWebTablePage.tumBodyWebElementi.getText());
         // Body bu şekilde bütün elementlerini gösterebiliyor.
 
-        //*****Sutun sayısını görmedik. WebTableların en önemli özelligi biz sutun sayısına bakmıyoruz.****
+        //*****Sutun sayısını görmedik. WebTableların en önemli özelligi biz sutun sayısına bakamıyoruz.****
         //*****Bir satırda kaç data var onu bulabiliriz*****
 
 
-        // Eger body tek bir webelement olarak locate edersek
+        // Eger bodyyi tek bir webelement olarak locate edersek
         // icindeki tum datalari getText() ile yazdirabiliriz
         // ancak bu durumda bu elementler ayri ayri degil
         // body'nin icindeki tek bir String'in parcalari olurlar
-        // dolayisiyla bu elementlere tek tek ulasmamaiz mumkun olmaz
+        // dolayisiyla bu elementlere tek tek ulasmamiz mumkun olmaz
         // sadece contains methodu ile body'de olup olmadiklarini test edebiliriz
 
         // Eger her bir data'yi ayri ayri almak istersek
-        // //tbody//td seklinde locate edip bir list'e atabiliriz
+        //    //tbody//td     seklinde locate edip bir list'e atabiliriz
 
         List<WebElement> bodyTumDataList=hmcWebTablePage.tumBodyDatalariList;
 
