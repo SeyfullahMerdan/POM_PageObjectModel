@@ -14,7 +14,7 @@ import utilities.Driver;
         //	test data password : manager1!
         //	Degerleri girildiginde sayfaya girilemedigini test et
 
-        @Test
+        @Test (groups="miniRegression")
         public void test01(){
             //		 https://www. hotelmycamp.com/ adresine git
             Driver.getDriver().get("https://www.hotelmycamp.com/");

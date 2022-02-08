@@ -26,7 +26,7 @@ public class C02_PageIlkClass {
         Driver.closeDriver();
     }
 
-    @Test
+    @Test (groups="miniRegression")
     public void Test02(){
         // amazona gidelim java için arama yapalım, sonucun java içerdigini test edelim.
 

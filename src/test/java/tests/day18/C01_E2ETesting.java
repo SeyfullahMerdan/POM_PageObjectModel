@@ -25,7 +25,7 @@ public class C01_E2ETesting{
     //9. “Hotel was inserted successfully” textinin göründüğünü test edin.
     //10. OK butonuna tıklayın.
 
-    @Test
+    @Test (groups="miniRegression")
     public void test01() {
 
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
