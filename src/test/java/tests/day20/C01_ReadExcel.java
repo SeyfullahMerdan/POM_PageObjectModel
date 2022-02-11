@@ -14,6 +14,7 @@ public class C01_ReadExcel {
 
     @Test
     public void test01() throws IOException {
+        //// merhaba //
 
         String path="src/test/java/resources/ulkeler.xlsx";
         FileInputStream fis=new FileInputStream(path);  //File ı getir ve oku diyorum, Hangi fail diyor ve bir path istiyor
